@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
+#include <stddef.h>
 
 /**
  * main - check the code for
@@ -25,7 +26,7 @@ int main(void)
 
     printf("-----------------\n");
 
-    insert_node(&head, 27);
+    insert_node(&head, 27); /*gcc why not working*/
 
     print_listint(head);
 
