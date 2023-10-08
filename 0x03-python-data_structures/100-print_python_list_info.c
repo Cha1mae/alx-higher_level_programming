@@ -2,10 +2,15 @@
 #include <Python.h>
 #include <stdio.h>
 
+/**
+  * Trying to see if this is a correct 
+  * Function to print information about a Python list
+  *
+**/
 void print_python_list_info(PyObject *p)
 {
 	Py_ssize_t size_p, allocated, idx = 0;
-	PyObject *element;
+	PyObject *l;
 
 	size_p = PyList_Size(p);
 	allocated = ((PyListObject *)p)->allocated;
@@ -13,8 +18,8 @@ void print_python_list_info(PyObject *p)
 	printf("[*] Allocated = %ld\n", allocated);
 	while (idx < size_p)
 	{
-		element = PyList_GetItem(p, idx);
-		printf("Element %ld: %s\n", idx, Py_TYPE(element)->tp_name);
+		l = PyList_GetItem(p, idx);
+		printf("Element %ld: %s\n", idx, Py_TYPE(l)->tp_name);
 		idx++;
 	}
 }
@@ -43,4 +48,3 @@ int main(void)
 
     return 0;
 }
-
