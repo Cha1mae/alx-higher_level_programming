@@ -7,6 +7,5 @@ def divisible_by_2(my_list=[]):
         if (i % 2) == 0:
             list2divs.append(True)
         else:
-            list2divs.append(False)
-    
+            list2divs.append(False)    
     return list2divs
