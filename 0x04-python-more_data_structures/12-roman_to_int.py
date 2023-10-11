@@ -8,7 +8,7 @@ def subtract_smaller(list_num):
             total_to_subtract += num
 
     return (max_in_list - total_to_subtract)
-
+   
 def roman_to_int(roman_string):
     if not roman_string:
         return (0)
@@ -20,18 +20,18 @@ def roman_to_int(roman_string):
     numeral_keys = list(roman_numerals.keys())
 
     result = 0
-    previous_value = 0
-    current_values = [0]
+    pre_value = 0
+    cur_values = [0]
     for char in roman_string:
         for numeral in numeral_keys:
             if numeral == char:
-                if roman_numerals.get(char) <= previous_value:
-                    result += subtract_smaller(current_values)
-                    current_values = [roman_numerals.get(char)]
+                if roman_numerals.get(char) <= pre_value:
+                    result += subtract_smaller(cur_values)
+                    cur_values = [roman_numerals.get(char)]
                 else:
-                    current_values.append(roman_numerals.get(char))
+                    cur_values.append(roman_numerals.get(char))
 
-                previous_value = roman_numerals.get(char)
+                pre_value = roman_numerals.get(char)
 
-    result += subtract_smaller(current_values)
+    result += subtract_smaller(cur_values)
     return (result)
