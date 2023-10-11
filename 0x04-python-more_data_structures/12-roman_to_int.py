@@ -23,7 +23,6 @@ def roman_to_int(roman_string):
     result = 0
     pre_value = 0
     cur_values = [0]
-
     for char in roman_string:
         for numeral in numeral_keys:
             if numeral == char:
