@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def subtract_smaller(list_num):
     total_to_subtract = 0
     max_in_list = max(list_num)
@@ -13,7 +12,6 @@ def subtract_smaller(list_num):
 def roman_to_int(roman_string):
     if not roman_string:
         return (0)
-
     if not isinstance(roman_string, str):
         return (0)
 
@@ -23,7 +21,6 @@ def roman_to_int(roman_string):
     result = 0
     previous_value = 0
     current_values = [0]
-
     for char in roman_string:
         for numeral in numeral_keys:
             if numeral == char:
@@ -36,5 +33,4 @@ def roman_to_int(roman_string):
                 previous_value = roman_numerals.get(char)
 
     result += subtract_smaller(current_values)
-
     return (result)
