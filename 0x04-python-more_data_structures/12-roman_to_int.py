@@ -8,7 +8,8 @@ def subtract_smaller(list_num):
             total_to_subtract += num
 
     return (max_in_list - total_to_subtract)
-   
+
+
 def roman_to_int(roman_string):
     if not roman_string:
         return (0)
