@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+"""THE SQUARE MODULE"""
+
+
 class Square:
     """Defines a square"""
+
+
     def __init__(self, size=0):
         """Initializes the data"""
         if not isinstance(size, int):
