@@ -6,8 +6,12 @@ class Square:
     """Defines a square"""
 
     def __init__(self, size=0):
-        """Initializes the data"""
-        self.size = size
+        """Initializes the data
+
+        Args:
+            size (int): Length of a side of the square
+        """
+        self.__size = size  # size of the square
 
     def area(self):
         """Returns the current square area"""
@@ -15,7 +19,12 @@ class Square:
 
     @property
     def size(self):
-        """Getter method to retrieve the size of the square"""
+        """Getter method to retrieve the size of the square
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than 0.
+        """
         return self.__size
 
     @size.setter
@@ -34,4 +43,3 @@ class Square:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-
