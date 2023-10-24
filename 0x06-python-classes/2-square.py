@@ -5,11 +5,16 @@
 class Square:
     """Defines a square"""
 
-
     def __init__(self, size=0):
-        """Initializes the data"""
+        """Initializes the data
+	
+	Args:
+	    size: lenght of square side
 
-
+	Raises:
+	    TypeError: is size not int
+	    ValueError: if size less dan 0
+	"""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
