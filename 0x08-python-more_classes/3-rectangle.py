@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """
-Rectangle module.
-
-This module contains a class that defines a rectangle.
+Define a class Rectangle that defines a rectangle
 """
 
 
 class Rectangle:
     """
-    Defines a rectangle.
+    rectangle class again
     """
 
     def __init__(self, width=0, height=0):
@@ -16,8 +14,8 @@ class Rectangle:
         Sets the necessary attributes for the Rectangle object.
 
         Args:
-            width (int): the width of the rectangle.
-            height (int): the height of the rectangle.
+            width: the width of the rectangle.
+            height: the height of the rectangle.
         """
         self.width = width
         self.height = height
@@ -36,13 +34,13 @@ class Rectangle:
 
     @property
     def width(self):
-        """Get or set the width of the rectangle."""
+        """Get or sett the width of the rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
         """
-        Set the width of the rectangle.
+        Sett the width of the rectangle.
 
         Args:
             value (int): The width value.
@@ -61,13 +59,13 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get or set the height of the rectangle."""
+        """def height of the rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
         """
-        Set the height of the rectangle.
+        Sett the height of the rectangle.
 
         Args:
             value (int): The height value.
@@ -85,11 +83,11 @@ class Rectangle:
             raise TypeError("height must be an integer")
 
     def area(self):
-        """Returns the current rectangle area."""
+        """Returns the area of current rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):
-        """Returns the current rectangle perimeter."""
+        """Returns permter of the current rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return self.__width * 2 + self.__height * 2
