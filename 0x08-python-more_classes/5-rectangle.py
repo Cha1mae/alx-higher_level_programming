@@ -66,9 +66,9 @@ class Rectangle:
         return rect_str[:-1]
 
     def __repr__(self):
-        """let return a string representation of the rectangle for recreation"""
+        """let return a string rep of the rectgl for rec"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """pwint the message Bye rectangle... when an instance is deleted"""
+        """pwint the mesg Bye rectangle... when an instance is del"""
         print("Bye rectangle...")
