@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 Define a class Rectangle that defines a rectangle
 """
@@ -64,11 +63,11 @@ class Rectangle:
         return rect_str[:-1]
 
     def __repr__(self):
-        """Ret a string representation of the rectangle for recreation"""
+        """Ret a string representation of the rectangle for rec"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Pwint the message Bye rectangle... when an instance is deleted"""
+        """Pwint the message Bye rectangle... when an instance is del"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
