@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import sys
 
+
 def is_safe(board, row, col, n):
     """
     Check if placing a queen at board[row][col] is safe.
@@ -16,6 +17,7 @@ def is_safe(board, row, col, n):
             return False
     return True
 
+
 def solve_nqueens(n):
     """
     Solve the N-Queens problem for a board of size n x n.
@@ -24,6 +26,7 @@ def solve_nqueens(n):
     solutions = []
     solve_nqueens_util(board, 0, n, solutions)
     return solutions
+
 
 def solve_nqueens_util(board, col, n, solutions):
     """
@@ -44,6 +47,7 @@ def solve_nqueens_util(board, col, n, solutions):
             res = solve_nqueens_util(board, col + 1, n, solutions) or res
             board[row_index][col] = 0
     return res
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
