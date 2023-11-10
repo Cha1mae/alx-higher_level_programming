@@ -17,7 +17,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-   @staticmethod
+    @staticmethod
     def to_json_string(list_dictionaries):
         '''a dictionary that's rightly and longer'''
         if list_dictionaries is None or not list_dictionaries:
@@ -25,7 +25,7 @@ class Base:
         else:
             return dumps(list_dictionaries)
 
-    @staticmethod		(task17)
+    @staticmethod
     def from_json_string(json_string):
         '''Unjsonifies a dictionary.'''
         if json_string is None or not json_string:
@@ -100,6 +100,7 @@ class Base:
                          "x": row[2], "y": row[3]}
                 ret.append(cls.create(**d))
         return ret
+
     @staticmethod
     def draw(list_rectangles, list_squares):
         import turtle
