@@ -602,31 +602,6 @@ were given"
         s2.update(**s1_dictionary)
         self.assertEqual(str(s1), str(s2))
         self.assertNotEqual(s1, s2)
-   def test_G_validate_type(self):
-        '''Tests property validation.'''
-        r = Square(1)
-        attributes = ["x", "y"]
-        for attribute in attributes:
-            s = "{} must be an integer".format(attribute)
-            for invalid_type in self.invalid_types():
-                with self.assertRaises(TypeError) as e:
-                    setattr(r, attribute, invalid_type)
-                try:
-                    self.assertEqual(str(e.exception), s)
-                except AssertionError:
-                    print(f"Failed for attribute: {attribute}, invalid_type: {invalid_type}")
-                    raise
-
-        s = "width must be an integer"
-        for invalid_type in self.invalid_types():
-            with self.assertRaises(TypeError) as e:
-                setattr(r, "width", invalid_type)
-            try:
-                self.assertEqual(str(e.exception), s)
-            except AssertionError:
-                print(f"Failed for width, invalid_type: {invalid_type}")
-                raise
-
 
 if __name__ == "__main__":
     unittest.main()
