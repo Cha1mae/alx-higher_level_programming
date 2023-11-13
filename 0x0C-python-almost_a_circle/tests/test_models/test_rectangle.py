@@ -154,7 +154,7 @@ given"
 
     # ----------------- Tests for #3 ------------------------
 
-    def invalid_types(self):
+    def test_invalid_types(self):
         '''Returns tuple of types for validation.'''
         t = (3.14, -1.1, float('inf'), float('-inf'), True, "str", (2,),
              [4], {5}, {6: 7}, None)
