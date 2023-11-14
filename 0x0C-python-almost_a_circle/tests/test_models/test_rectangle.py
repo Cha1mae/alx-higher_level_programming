@@ -395,7 +395,7 @@ given"
         '''Tests __str__() method signature.'''
         r = Rectangle(5, 2)
         with self.assertRaises(TypeError) as e:
-            r.__str__()
+            Rectangle.__str__()
         s = "__str__() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), s)
 
