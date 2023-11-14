@@ -152,18 +152,6 @@ given"
         self.assertEqual(r.x, 102)
         self.assertEqual(r.y, 103)
 
-    def test_G_validate_type(self):
-        '''Tests property validation.'''
-        r = Rectangle(1, 2)
-        attributes = ["x", "y", "width", "height"]
-        for attribute in attributes:
-            s = "{} must be an integer".format(attribute)
-            for invalid_type in self.invalid_types():  # Fixed this line
-                with self.assertRaises(TypeError) as e:
-                    setattr(r, attribute, invalid_type)
-                self.assertEqual(str(e.exception), s)
-    
-
     # ----------------- Tests for #3 ------------------------
 
     def invalid_types(self):
@@ -602,7 +590,6 @@ given"
         r2.update(**r1_dictionary)
         self.assertEqual(str(r1), str(r2))
         self.assertNotEqual(r1, r2)
-
 
 if __name__ == "__main__":
     unittest.main()

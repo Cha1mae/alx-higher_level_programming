@@ -603,6 +603,5 @@ were given"
         self.assertEqual(str(s1), str(s2))
         self.assertNotEqual(s1, s2)
 
-
 if __name__ == "__main__":
     unittest.main()
