@@ -152,6 +152,18 @@ given"
         self.assertEqual(r.x, 102)
         self.assertEqual(r.y, 103)
 
+    def test_G_validate_type(self):
+        '''Tests property validation.'''
+        r = Rectangle(1, 2)
+        attributes = ["x", "y", "width", "height"]
+        for attribute in attributes:
+            s = "{} must be an integer".format(attribute)
+            for invalid_type in self.invalid_types():  # Fixed this line
+                with self.assertRaises(TypeError) as e:
+                    setattr(r, attribute, invalid_type)
+                self.assertEqual(str(e.exception), s)
+    
+
     # ----------------- Tests for #3 ------------------------
 
     def invalid_types(self):
@@ -383,7 +395,7 @@ given"
         '''Tests __str__() method signature.'''
         r = Rectangle(5, 2)
         with self.assertRaises(TypeError) as e:
-            Rectangle.__str__()
+            r.__str__()
         s = "__str__() missing 1 required positional argument: 'self'"
         self.assertEqual(str(e.exception), s)
 
