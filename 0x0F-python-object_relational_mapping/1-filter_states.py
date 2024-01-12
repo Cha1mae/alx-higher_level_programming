@@ -19,12 +19,13 @@ if __name__ == "__main__":
         db=database
     )
 
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
+    cr = db.cr()
+    cr.execute("""SELECT * FROM states WHERE name
+                    LIKE BINARY 'N%' ORDER BY id ASC""")
 
-    rows = cursor.fetchall()
+    rows = cr.fetchall()
     for row in rows:
         print(row)
 
-    cursor.close()
+    cr.close()
     db.close()
