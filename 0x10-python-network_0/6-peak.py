@@ -11,7 +11,7 @@ def find_peak(list_of_integers):
     if length == 1:
         return list_of_integers[0]
     elif length == 2:
-        return look_maxing(list_of_integers)
+        return max(list_of_integers)
 
     m = length // 2
     p = list_of_integers[m]
