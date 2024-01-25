@@ -1,18 +1,19 @@
 #!/usr/bin/python3
 """ Module to find a peak num in a list of unsorted ints"""
 
+
 def find_peak(list_of_integers):
     """the function will do the job for us"""
     if not list_of_integers:
         return None
 
-    low, high = 0, len(list_of_integers) - 1
+    lw, hi = 0, len(list_of_integers) - 1
 
-    while low < high:
-        mid = (low + high) // 2
+    while lw < hi:
+        mid = (lw + hi) // 2
         if list_of_integers[mid] > list_of_integers[mid + 1]:
-            high = mid
+            hi = mid
         else:
-            low = mid + 1
+            lw = mid + 1
 
-    return list_of_integers[low]
+    return list_of_integers[lw]
