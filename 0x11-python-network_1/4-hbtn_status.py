@@ -11,12 +11,12 @@ def fetch_lurl():
     url = "https://alx-intranet.hbtn.io/status"
 
     """GET the URL"""
-    response = requests.get(url)
+    rec = requests.get(url)
 
     """Display the body info"""
     print("Body response:")
-    print("\t- type:", type(response.text))
-    print("\t- content:", response.text)
+    print("\t- type:", type(rec.text))
+    print("\t- content:", rec.text)
 
 
 if __name__ == "__main__":
