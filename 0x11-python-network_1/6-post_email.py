@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""lets post an email :)"""
+"""
+lets post an email :)
+i put thediscription
+in each step
+"""
 import requests
 import sys
 
